@@ -3,33 +3,6 @@
   <webLocator>//*[]</webLocator>
 
   <childs>
-
-    <webElement name="Layout">
-      <description>Layout tab</description>
-      <webLocator>  </webLocator>
-
-      <childs>
-        <webElement name="styleInput">
-          <description>input enum for style</description>
-          
-          <webLocator>
-            <type>Css</type>
-            <value></value>
-          </webLocator>
-          
-        </webElement>
-        <webElement name="breadcrumbsInput">
-          <description>input checkbox for breadcrumbs</description>
-          
-          <webLocator>
-            <type>Css</type>
-            <value></value>
-          </webLocator>
-          
-        </webElement>
-      </childs>
-    </webElement>
-
     <webElement name="Text">
       <description>Text tab</description>
       <webLocator>  </webLocator>
@@ -41,6 +14,148 @@
           <webLocator>
             <type>Css</type>
             <value></value>
+            <relative></relative>
+          </webLocator>
+
+        </webElement>
+        <webElement name="SubHeadlineInput">
+          <description>Input for Sub-Headline</description>
+
+          <webLocator>
+            <type>Css</type>
+            <value></value>
+            <relative></relative>
+          </webLocator>
+
+        </webElement>
+        <webElement name="Paragraphinput">
+          <description>Input for Paragraph</description>
+
+          <webLocator>
+            <type>Css</type>
+            <value></value>
+            <relative></relative>
+          </webLocator>
+
+        </webElement>
+        <webElement name="FootnoteInput">
+          <description>Input for FoonNote</description>
+
+          <webLocator>
+            <type>Css</type>
+            <value></value>
+            <relative></relative>
+          </webLocator>
+
+        </webElement>
+        <webElement name="FontColorInput">
+          <description>Input enum for Font Color</description>
+
+          <webLocator>
+            <type>Css</type>
+            <value></value>
+            <relative></relative>
+          </webLocator>
+
+        </webElement>
+      </childs>
+    </webElement>
+    <webElement name="Image">
+      <description>Image tab</description>
+      <webLocator>  </webLocator>
+
+      <childs>
+        <webElement name="AltTextInput">
+          <description>Input for Alt Text</description>
+
+          <webLocator>
+            <type>Css</type>
+            <value></value>
+            <relative></relative>
+          </webLocator>
+
+        </webElement>
+        <webElement name="DirectionInput">
+          <description>Input enum for Direction</description>
+
+          <webLocator>
+            <type>Css</type>
+            <value></value>
+            <relative></relative>
+          </webLocator>
+
+        </webElement>
+      </childs>
+    </webElement>
+    <webElement name="Links">
+      <description>Links tab</description>
+      <webLocator>  </webLocator>
+
+      <childs>
+        <webElement name="LinkNameInput">
+          <description>Input for Link Name</description>
+
+          <webLocator>
+            <type>Css</type>
+            <value></value>
+            <relative></relative>
+          </webLocator>
+
+        </webElement>
+        <webElement name="PathInput">
+          <description>Input for Path</description>
+
+          <webLocator>
+            <type>Css</type>
+            <value></value>
+            <relative></relative>
+          </webLocator>
+
+        </webElement>
+        <webElement name="TargetInput">
+          <description>Input enum for Target</description>
+
+          <webLocator>
+            <type>Css</type>
+            <value></value>
+            <relative></relative>
+          </webLocator>
+
+        </webElement>
+        <webElement name="DisplayModeInput">
+          <description>Input enum for Display Mode</description>
+
+          <webLocator>
+            <type>Css</type>
+            <value></value>
+            <relative></relative>
+          </webLocator>
+
+        </webElement>
+        <webElement name="TooltipInput">
+          <description>Input for Tooltip</description>
+
+          <webLocator>
+            <type>Css</type>
+            <value></value>
+            <relative></relative>
+          </webLocator>
+
+        </webElement>
+      </childs>
+    </webElement>
+    <webElement name="Layout">
+      <description>Layout tab</description>
+      <webLocator>  </webLocator>
+
+      <childs>
+        <webElement name="styleInput">
+          <description>input enum for style</description>
+
+          <webLocator>
+            <type>Css</type>
+            <value></value>
+            <relative></relative>
           </webLocator>
 
         </webElement>
@@ -50,18 +165,11 @@
           <webLocator>
             <type>Css</type>
             <value></value>
+            <relative></relative>
           </webLocator>
 
         </webElement>
       </childs>
     </webElement>
-
-
-
-
-
-
-
   </childs>
-
 </webElement>
