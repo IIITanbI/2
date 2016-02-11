@@ -1,4 +1,4 @@
-<webElement name="HeroCentered1">
+<webElement name="HeroCentered">
   <description>Hero Centered Element</description>
   <webLocator>//*[]</webLocator>
 
