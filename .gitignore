@@ -32,7 +32,4 @@ _ReSharper*/
 *.[Jj]peg
 *.txt
 TestConsole/
-/TConsole/App.config
-/TConsole/config.xml
-/TConsole/Program.cs
-TConsole
+
