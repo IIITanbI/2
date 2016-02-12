@@ -7,7 +7,7 @@
     using System.Threading.Tasks;
     using XmlDesiarilization;
 
-    [CommandManager("BaseCommandManager", Description = "Base class for all command managers")]
+    //[CommandManager("BaseCommandManager", Description = "Base class for all command managers")]
     public abstract class CommandManagerBase
     {
         public CommandManagerBase(XmlBaseType configurationObject)
