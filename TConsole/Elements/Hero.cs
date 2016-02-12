@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 namespace TConsole
 {
     [XmlType("Hero")]
+    [XmlLocation("hero")]
     public class Hero : XmlBaseType
     {
         [XmlProperty("Link of hero")]
@@ -19,7 +20,7 @@ namespace TConsole
         public HeroText Text { get; set; }
 
         [XmlProperty("Image of hero")]
-        [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "Text", "text")]
+        [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "Image", "image")]
         public HeroImage Image { get; set; }
 
         [XmlProperty("Image direction of hero", IsRequired = false)]
@@ -28,6 +29,7 @@ namespace TConsole
     }
 
     [XmlType("Hero Layout")]
+    [XmlLocation("heroLayout")]
     public class HeroLayout : XmlBaseType
     {
         [XmlProperty("Breadcrumb of Layout-element", IsRequired = false)]

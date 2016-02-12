@@ -8,6 +8,7 @@ using QA.TestLibs.XmlDesiarilization;
 namespace TConsole
 {
     [XmlType("Hero Anchor")]
+    [XmlLocation("heroAnchor")]
     public class HeroAnchor : XmlBaseType
     {
         [XmlProperty("Text of hero-anchor", IsRequired = false)]
@@ -23,19 +24,20 @@ namespace TConsole
         public HeroAnchorLayout Layout { get; set; }
 
         [XmlProperty("Image of hero-anchor", IsRequired = false)]
-        [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "Layout", "layout")]
+        [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "Image", "image")]
         public HeroImage Image { get; set; }
 
         [XmlProperty("Icon of hero-anchor", IsRequired = false)]
-        [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "Layout", "layout")]
+        [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "Icon", "icon")]
         public HeroImage Icon { get; set; }
     }
 
     [XmlType("Hero Anchor Layout")]
+    [XmlLocation("heroAcnhorLayout")]
     public class HeroAnchorLayout : XmlBaseType
     {
         [XmlProperty("Vertical position of Layout-element", IsRequired = false)]
-        [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "VerticalPosition", "varticalPosition")]
+        [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "VerticalPosition", "verticalPosition")]
         public HeroAnchorLayoutVerticalPosition VerticalPosition { get; set; } = HeroAnchorLayoutVerticalPosition.Top;
 
         [XmlProperty("Horizontal position of Layout-element", IsRequired = false)]

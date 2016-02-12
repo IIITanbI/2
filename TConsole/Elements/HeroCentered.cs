@@ -8,19 +8,22 @@ using QA.TestLibs.XmlDesiarilization;
 namespace TConsole
 {
     [XmlType("Hero Centered")]
+    [XmlLocation("heroCentered")]
     public class HeroCentered : XmlBaseType
     {
-        [XmlProperty("HeroCentered Text", IsRequired = false)]
+        [XmlProperty("Text of Hero Centered", IsRequired = false)]
         [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "Text", "text")]
         public HeroCenteredText Text { get; set; }
 
-        [XmlProperty("HeroCentered Links", IsRequired = false)]
+        [XmlProperty("Links of Hero Centered", IsRequired = false)]
         [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "Links", "links")]
         public List<HeroLink> Links { get; set; }
 
+        [XmlProperty("Image of Hero Centered", IsRequired = false)]
+        [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "Image", "image")]
         public HeroImage Image { get; set; }
 
-        [XmlProperty("HeroCentered Layout", IsRequired = false)]
+        [XmlProperty("Layout of Hero Centered", IsRequired = false)]
         [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "Layout", "layout")]
         public HeroCenteredLayout Layout { get; set; }
     }
@@ -29,23 +32,23 @@ namespace TConsole
     [XmlLocation("heroCenteredText")]
     public class HeroCenteredText : XmlBaseType
     {
-        [XmlProperty("Headline of HeroCentered Text", IsRequired = false)]
+        [XmlProperty("Headline of Hero Centered Text", IsRequired = false)]
         [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "HeadLine", "headline")]
         public string HeadLine { get; set; }
 
-        [XmlProperty("SubHeadline of HeroCentered Text", IsRequired = false)]
+        [XmlProperty("SubHeadline of Hero Centered Text", IsRequired = false)]
         [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "SubHeadLine", "subheadline", "subHeadline")]
         public string SubHeadLine { get; set; }
 
-        [XmlProperty("Paragraph of HeroCentered Text", IsRequired = false)]
+        [XmlProperty("Paragraph of Hero Centered Text", IsRequired = false)]
         [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "Paragraph", "paragraph")]
         public string Paragraph { get; set; }
 
-        [XmlProperty("Footnote of HeroCentered Text", IsRequired = false)]
+        [XmlProperty("Footnote of Hero Centered Text", IsRequired = false)]
         [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "FootNote", "footnote", "footNote")]
         public string FootNote { get; set; }
 
-        [XmlProperty("FontColor enum of HeroCentered Text", IsRequired = false)]
+        [XmlProperty("FontColor DropDownList of Hero Centered Text", IsRequired = false)]
         [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "FontColor", "fontcolor", "fontColor")]
         public HeroTextFontColor FontColor { get; set; } = HeroTextFontColor.Black;
     }
@@ -55,11 +58,11 @@ namespace TConsole
     [XmlLocation("heroCenteredLayout")]
     public class HeroCenteredLayout : XmlBaseType
     {
-        [XmlProperty("Style enum of HeroCentered Layout", IsRequired = false)]
+        [XmlProperty("Style enum of Hero Centered Layout", IsRequired = false)]
         [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "Style", "style")]
         public HeroLayoutStyle Style { get; set; } = HeroLayoutStyle.Promo;
 
-        [XmlProperty("Breadcrumbs of HeroCentered Layout", IsRequired = false)]
+        [XmlProperty("Breadcrumbs of Hero Centered Layout", IsRequired = false)]
         [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "Breadcrumbs", "breadcrumbs")]
         public bool Breadcrumbs { get; set; }
     }

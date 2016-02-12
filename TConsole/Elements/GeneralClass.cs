@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 namespace TConsole
 {
     [XmlType("Hero Link")]
+    [XmlLocation("heroLink")]
     public class HeroLink : XmlBaseType
     {
         [XmlProperty("Link Name of HeroCentered link", IsRequired = false)]
@@ -32,6 +33,7 @@ namespace TConsole
     }
 
     [XmlType("Hero Text")]
+    [XmlLocation("heroText")]
     public class HeroText : XmlBaseType
     {
         [XmlProperty("Text headline of hero-element", IsRequired = false)]
@@ -48,6 +50,7 @@ namespace TConsole
     }
 
     [XmlType("Hero Image")]
+    [XmlLocation("heroImage")]
     public class HeroImage
     {
         [XmlProperty("Alt Text for image", IsRequired = false)]

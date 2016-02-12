@@ -8,79 +8,82 @@ using QA.TestLibs.XmlDesiarilization;
 namespace TConsole
 {
     [XmlType("Hero Carousel")]
+    [XmlLocation("heroCarousel")]
     public class HeroCarousel : XmlBaseType
     {
-        [XmlProperty("HeroCentered Layout", IsRequired = false)]
-        [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "Layout", "layout")]
+        [XmlProperty("Items of Hero Carousel", IsRequired = false)]
+        [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "Items", "items")]
         public List<HeroCarouselItem> Items { get; set; }
 
-        [XmlProperty("HeroCentered Layout", IsRequired = false)]
-        [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "Layout", "layout")]
+        [XmlProperty("Main Theme string of Hero Carousel", IsRequired = false)]
+        [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "MainTheme", "mainTheme", "maintheme")]
         public string MainTheme { get; set; }
 
-        [XmlProperty("HeroCentered Layout", IsRequired = false)]
-        [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "Layout", "layout")]
+        [XmlProperty("Transitioin mode of Hero Carousel", IsRequired = false)]
+        [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "TransitionMode", "transitionMode", "transitionmode")]
         public HeroCarouselTransitionMode TransitionMode { get; set; } = HeroCarouselTransitionMode.Manual;
 
-        [XmlProperty("HeroCentered Layout")]
-        [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "Layout", "layout")]
+        [XmlProperty("Rotation time of Hero Carousel")]
+        [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "RotationTime", "RotationTime", "rotationtime")]
         public int RotationTime { get; set; }
 
-        [XmlProperty("HeroCentered Layout")]
-        [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "Layout", "layout")]
+        [XmlProperty("Transition time of Hero Carousel")]
+        [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "TransitionTime", "transitionTime", "transitiontime")]
         public int TransitionTime { get; set; }
     }
 
     [XmlType("Hero Carousel Item")]
-    [XmlLocation("heroCenteredText")]
+    [XmlLocation("heroCarouselItem")]
     public class HeroCarouselItem : XmlBaseType
     {
-        [XmlProperty("Headline of HeroCentered Text", IsRequired = false)]
-        [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "HeadLine", "headline")]
+        [XmlProperty("Text of Hero Carousel Item", IsRequired = false)]
+        [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "Text", "text")]
         public HeroCarouselItemText Text { get; set; }
 
-        [XmlProperty("Headline of HeroCentered Text", IsRequired = false)]
-        [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "HeadLine", "headline")]
+        [XmlProperty("Image of Hero Carousel Item", IsRequired = false)]
+        [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "Image", "image")]
         public HeroImage Image { get; set; }
 
-        [XmlProperty("Headline of HeroCentered Text", IsRequired = false)]
-        [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "HeadLine", "headline")]
+        [XmlProperty("Link of Hero Carousel Item", IsRequired = false)]
+        [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "Link", "link")]
         public HeroLink Link { get; set; }
     }
+
     [XmlType("Hero Carousel Item Text")]
+    [XmlLocation("heroCarouselItemText")]
     public class HeroCarouselItemText
     {
-        [XmlProperty("Headline of HeroCentered Text", IsRequired = false)]
+        [XmlProperty("Headline of Hero Carousel Item Text", IsRequired = false)]
         [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "HeadLine", "headline")]
         public string HeadLine { get; set; }
 
-        [XmlProperty("Paragraph of HeroCentered Text", IsRequired = false)]
+        [XmlProperty("Paragraph of Hero Carousel Item Text", IsRequired = false)]
         [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "Paragraph", "paragraph")]
         public string Paragraph { get; set; }
 
-        [XmlProperty("Font Color enum of HeroCarousel Text", IsRequired = false)]
+        [XmlProperty("Font Color DropDownlist of Hero Carousel Item Text", IsRequired = false)]
         [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "FontColor", "fontcolor", "fontColor")]
         public HeroTextFontColor FontColor { get; set; } = HeroTextFontColor.Black;
 
-        [XmlProperty("Main Theme Color enum of HeroCarousel Text", IsRequired = false)]
-        [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "FontColor", "fontcolor", "fontColor")]
+        [XmlProperty("Main Theme Color DropDownlist of Hero Carousel Item Text", IsRequired = false)]
+        [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "MainThemeColor", "mainThemeColor", "mainthemeColor", "mainthemecolor")]
         public HeroTextMainThemeColor MainThemeColor { get; set; } = HeroTextMainThemeColor.Black;
     }
 
     [XmlType("Hero Carousel Item Layout")]
-    [XmlLocation("heroCenteredLayout")]
+    [XmlLocation("heroCarouselItemLayout")]
     public class HeroCarouselItemLayout : XmlBaseType
     {
-        [XmlProperty("Breadcrumbs of HeroCentered Layout", IsRequired = false)]
+        [XmlProperty("Overlay checkbox of Hero Carousel Item Layout", IsRequired = false)]
         [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "Overlay", "overlay")]
         public bool Overlay { get; set; }
 
-        [XmlProperty("Breadcrumbs of HeroCentered Layout", IsRequired = false)]
-        [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "Breadcrumbs", "breadcrumbs")]
+        [XmlProperty("PlayIcon checkbox of Hero Carousel Item Layout", IsRequired = false)]
+        [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "PlayIcon", "playIcon", "playicon")]
         public bool PlayIcon { get; set; }
 
-        [XmlProperty("Breadcrumbs of HeroCentered Layout", IsRequired = false)]
-        [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "Breadcrumbs", "breadcrumbs")]
+        [XmlProperty("EmbeddedVideo checkbox of Hero Carousel Item Layout", IsRequired = false)]
+        [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "EmbeddedVideo", "embeddedVideo", "embeddedvideo")]
         public bool EmbeddedVideo { get; set; }
     }
 }

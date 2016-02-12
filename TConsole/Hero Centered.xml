@@ -19,32 +19,15 @@
         </webElement>
         <webElement name="ParagraphFrame">
           <description>Paragraph Frame</description>
-          <webLocator>
-            <frame>true</frame>
-            <frameLocatorType>index</frameLocatorType>
-            <frameLocatorValue>4</frameLocatorValue>
-          </webLocator>
-
-          <childs>
-            <webElement name="Paragraphinput">
-              <description>Input for Paragraph</description>
-              <webLocator>
-                <type>Css</type>
-                <value></value>
-                <relative></relative>
-              </webLocator>
-            </webElement>
-          </childs>
+           <frame>true</frame>
+           <frameLocatorType>Index</frameLocatorType>
+           <frameLocatorValue>4</frameLocatorValue>
         </webElement>
         <webElement name="FootnoteInput">
           <description>Input for FoonNote</description>
-
-          <webLocator>
-            <type>Css</type>
-            <value></value>
-            <relative></relative>
-          </webLocator>
-
+          <frame>true</frame>
+          <frameLocatorType>Index</frameLocatorType>
+          <frameLocatorValue>5</frameLocatorValue>
         </webElement>
         <webElement name="FontColorDropDownList">
           <description>DropDownList for Font Color</description>
