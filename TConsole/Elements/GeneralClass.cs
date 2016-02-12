@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace TConsole
 {
+    [XmlType("Hero Link")]
     public class HeroLink : XmlBaseType
     {
         [XmlProperty("Link Name of HeroCentered link", IsRequired = false)]
@@ -29,6 +30,8 @@ namespace TConsole
         [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "Tooltip", "tooltip")]
         public string Tooltip { get; set; }
     }
+
+    [XmlType("Hero Text")]
     public class HeroText : XmlBaseType
     {
         [XmlProperty("Text headline of hero-element", IsRequired = false)]
@@ -43,9 +46,16 @@ namespace TConsole
         [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "FontColor", "fontColor")]
         public HeroTextFontColor FontColor { get; set; }
     }
+
+    [XmlType("Hero Image")]
     public class HeroImage
     {
+        [XmlProperty("Alt Text for image", IsRequired = false)]
+        [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "ImageAltText", "imageAltText", "imagealttext")]
         public string ImageAltText { get; set; }
-        public HeroImageDirection ImageDerection { get; set; }
+
+        [XmlProperty("Image Direction", IsRequired = false)]
+        [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "ImageDirection", "imageDirection", "imagedirection")]
+        public HeroImageDirection ImageDirection { get; set; }
     }
 }

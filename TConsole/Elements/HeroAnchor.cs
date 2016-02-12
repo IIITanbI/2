@@ -7,6 +7,7 @@ using QA.TestLibs.XmlDesiarilization;
 
 namespace TConsole
 {
+    [XmlType("Hero Anchor")]
     public class HeroAnchor : XmlBaseType
     {
         [XmlProperty("Text of hero-anchor", IsRequired = false)]
@@ -21,12 +22,16 @@ namespace TConsole
         [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "Layout", "layout")]
         public HeroAnchorLayout Layout { get; set; }
 
+        [XmlProperty("Image of hero-anchor", IsRequired = false)]
+        [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "Layout", "layout")]
         public HeroImage Image { get; set; }
 
+        [XmlProperty("Icon of hero-anchor", IsRequired = false)]
+        [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "Layout", "layout")]
         public HeroImage Icon { get; set; }
-
     }
 
+    [XmlType("Hero Anchor Layout")]
     public class HeroAnchorLayout : XmlBaseType
     {
         [XmlProperty("Vertical position of Layout-element", IsRequired = false)]

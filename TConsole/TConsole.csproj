@@ -56,6 +56,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\QA.TestLibs.WebDriver\QA.TestLibs.WebDriver.csproj">
+      <Project>{ac86db53-5495-45b0-befd-70c77cc54136}</Project>
+      <Name>QA.TestLibs.WebDriver</Name>
+    </ProjectReference>
     <ProjectReference Include="..\QA.TestLibsTests\QA.TestLibsTests.csproj">
       <Project>{456f6bcb-3fb9-4674-bd48-86e2254a8b85}</Project>
       <Name>QA.TestLibsTests</Name>

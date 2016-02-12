@@ -7,6 +7,7 @@ using QA.TestLibs.XmlDesiarilization;
 
 namespace TConsole
 {
+    [XmlType("Hero Centered")]
     public class HeroCentered : XmlBaseType
     {
         [XmlProperty("HeroCentered Text", IsRequired = false)]

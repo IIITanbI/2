@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <webElement name="HeroCenteredForm">
   <description>Hero Centered Element</description>
   <webLocator>//*[]</webLocator>

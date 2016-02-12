@@ -1,4 +1,5 @@
 ﻿using QA.TestLibs;
+using QA.TestLibs.WebDriver;
 using QA.TestLibs.XmlDesiarilization;
 using System;
 using System.Collections.Generic;
@@ -36,6 +37,8 @@ namespace TConsole
         {
             ReflectionManager.LoadAssemblies(System.IO.Directory.GetCurrentDirectory());
             System.Globalization.CultureInfo.DefaultThreadCurrentCulture = System.Globalization.CultureInfo.GetCultureInfo("en-US");
+            XElement config = XDocument.Load("Hero Centered.xml").Element("webElement");
+            var we = XmlParser.Parse<WebElement>(config);
 
             GetAttribute();
             //XmlProperty MyAttribute =            (XmlProperty)Attribute.GetCustomAttribute(, typeof(XmlProperty));

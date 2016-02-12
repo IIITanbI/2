@@ -7,6 +7,7 @@ using QA.TestLibs.XmlDesiarilization;
 
 namespace TConsole
 {
+    [XmlType("Hero Carousel")]
     public class HeroCarousel : XmlBaseType
     {
         [XmlProperty("HeroCentered Layout", IsRequired = false)]
@@ -30,15 +31,23 @@ namespace TConsole
         public int TransitionTime { get; set; }
     }
 
-    [XmlType("Hero Centered Text")]
+    [XmlType("Hero Carousel Item")]
     [XmlLocation("heroCenteredText")]
     public class HeroCarouselItem : XmlBaseType
     {
+        [XmlProperty("Headline of HeroCentered Text", IsRequired = false)]
+        [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "HeadLine", "headline")]
         public HeroCarouselItemText Text { get; set; }
+
+        [XmlProperty("Headline of HeroCentered Text", IsRequired = false)]
+        [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "HeadLine", "headline")]
         public HeroImage Image { get; set; }
+
+        [XmlProperty("Headline of HeroCentered Text", IsRequired = false)]
+        [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "HeadLine", "headline")]
         public HeroLink Link { get; set; }
     }
-
+    [XmlType("Hero Carousel Item Text")]
     public class HeroCarouselItemText
     {
         [XmlProperty("Headline of HeroCentered Text", IsRequired = false)]
@@ -58,7 +67,7 @@ namespace TConsole
         public HeroTextMainThemeColor MainThemeColor { get; set; } = HeroTextMainThemeColor.Black;
     }
 
-    [XmlType("Hero Centered Layout")]
+    [XmlType("Hero Carousel Item Layout")]
     [XmlLocation("heroCenteredLayout")]
     public class HeroCarouselItemLayout : XmlBaseType
     {
