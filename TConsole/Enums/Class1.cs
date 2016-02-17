@@ -32,7 +32,7 @@ namespace TConsole
         Standart,
         FlipHorizontal
     }
-    public enum HeroLayoutStyle
+    public enum HeroCenteredLayoutStyle
     {
         Panorama,
         Promo,

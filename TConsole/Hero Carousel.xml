@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<webElement name="HeroCarouselForm">
+  <description>Hero Carousel Element</description>
+  <webLocator>//*[]</webLocator>
+
+  <childs>
+    <webElement name="ItemsTab">
+      <description>Text tab</description>
+      <webLocator>(.//a[contains(@class, 'x-tab-right')])[1]</webLocator>
+
+      <childs>
+        <webElement name="HeadlineInput">
+          <description>Input for headline</description>
+          <webLocator>.//*[contains(@name, 'headline')]</webLocator>
+        </webElement>
+        <webElement name="SubHeadlineInput">
+          <description>Input for Sub-Headline</description>
+          <webLocator>//*[contains(@name, 'subHeadline')]</webLocator>
+        </webElement>
+        <webElement name="ParagraphFrame">
+          <description>Paragraph Frame</description>
+          <frame>true</frame>
+          <frameLocatorType>Index</frameLocatorType>
+          <frameLocatorValue>4</frameLocatorValue>
+          
+          <childs>
+            <webElement name="ParagraphInput">
+              <description>Paragraph input</description>
+              <webLocator relative="false">//*[@id='CQrte']/div</webLocator>
+            </webElement>
+          </childs>
+        </webElement>
+        <webElement name="FootnoteFrame">
+          <description>FoonNote Frame</description>
+          <frame>true</frame>
+          <frameLocatorType>Index</frameLocatorType>
+          <frameLocatorValue>5</frameLocatorValue>
+          
+          <childs>
+            <webElement name="Footnoteinput">
+              <description>Footnote input</description>
+              <webLocator relative="false">//*[@id='CQrte']/div</webLocator>
+            </webElement>
+          </childs>
+        </webElement>
+        <webElement name="FontColorDropDownList">
+          <description>DropDownList for Font Color</description>
+          <webLocator>(.//input[contains(@name, 'fontColor')]/following::input)[1]</webLocator>
+        </webElement>
+      </childs>
+    </webElement>
+    <webElement name="GeneralTab">
+      <description>General tab</description>
+      <webLocator>(.//a[contains(@class, 'x-tab-right')])[2]</webLocator>
+      
+      <childs>
+        <webElement name="MainThemeInput">
+          <description>Input for Main Theme</description>
+          <webLocator>.//input[contains(@name, 'titlefield')]</webLocator>
+        </webElement>
+       </childs>
+    </webElement>
+    <webElement name="ConfigurationTab">
+      <description>Configuration tab</description>
+      <webLocator>(.//a[contains(@class, 'x-tab-right')])[3]</webLocator>
+
+      <childs>
+        <webElement name="TransitionModeDropDownList">
+          <description>DropDownList for Transition mode</description>
+          <webLocator>(.//input[contains(@name, 'autoRotation')]/following::input)[1]</webLocator>
+        </webElement>
+        <webElement name="RotationTimeInput">
+          <description>Input for Rotation Time</description>
+          <webLocator>.//input[contains(@name, 'animSpeed')]</webLocator>
+        </webElement>
+        <webElement name="TransitionTimeInput">
+          <description>Input for Transition Time</description>
+          <webLocator>.//input[contains(@name, 'switchTime')]</webLocator>
+        </webElement>
+      </childs>
+    </webElement>
+
+   </childs>
+</webElement>

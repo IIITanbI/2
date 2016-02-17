@@ -45,7 +45,7 @@ namespace TConsole
 
             //XElement elem = Config.Element("myComplex");
             //var obj = XmlParser.Parse<MyComplex>(elem);
-
+            XmlLocationType tt;
             var config1 = Config.Element("complexClass3_2");
             var obj1 = XmlParser.Parse<DataSamples.ComplexClass3>(config1);
 

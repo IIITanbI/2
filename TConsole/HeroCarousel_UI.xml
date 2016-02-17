@@ -1,54 +1,34 @@
-<?xml version="1.0" encoding="utf-8"?>
-<webElement name="HeroCenteredForm">
-  <description>Hero Centered Element</description>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<webElement name="HeroCenteredUI">
+  <description>Hero Centered UI</description>
   <webLocator>//*[]</webLocator>
 
   <childs>
-    <webElement name="TextTab">
-      <description>Text tab</description>
-      <webLocator>(.//a[contains(@class, 'x-tab-right')])[1]</webLocator>
+    <webElement name="LeftArrow">
+      <description>Left arrow</description>
+      <webLocator>.//a[contains(@class, "btn-prev")]</webLocator>
+    </webElement>
+    <webElement name="RightArrow">
+      <description>Left arrow</description>
+      <webLocator>.//a[contains(@class, "btn-next")]</webLocator>
+    </webElement>
+    <webElement name="Link">
+      <description>Link</description>
+      <weblocator>(.//div[contains(@class, 'slide active')])//a</weblocator>
+    </webElement>
+    
+    <webElement name="Switcher">
+      <description>Switcher</description>
+      <weblocator>.//div[contains(@class, 'switcher')]</weblocator>
 
       <childs>
-        <webElement name="HeadlineInput">
-          <description>Input for headline</description>
-          <webLocator>.//*[contains(@name, 'headline')]</webLocator>
-        </webElement>
-        <webElement name="SubHeadlineInput">
-          <description>Input for Sub-Headline</description>
-          <webLocator>//*[contains(@name, 'subHeadline')]</webLocator>
-        </webElement>
-        <webElement name="ParagraphFrame">
-          <description>Paragraph Frame</description>
-          <frame>true</frame>
-          <frameLocatorType>Index</frameLocatorType>
-          <frameLocatorValue>4</frameLocatorValue>
-          
-          <childs>
-            <webElement name="ParagraphInput">
-              <description>Paragraph input</description>
-              <webLocator relative="false">//*[@id='CQrte']/div</webLocator>
-            </webElement>
-          </childs>
-        </webElement>
-        <webElement name="FootnoteFrame">
-          <description>FoonNote Frame</description>
-          <frame>true</frame>
-          <frameLocatorType>Index</frameLocatorType>
-          <frameLocatorValue>5</frameLocatorValue>
-          
-          <childs>
-            <webElement name="Footnoteinput">
-              <description>Footnote input</description>
-              <webLocator relative="false">//*[@id='CQrte']/div</webLocator>
-            </webElement>
-          </childs>
-        </webElement>
-        <webElement name="FontColorDropDownList">
-          <description>DropDownList for Font Color</description>
-          <webLocator>(.//input[contains(@name, 'fontColor')]/following::input)[1]</webLocator>
+        <webElement name="Button1">
+          <description>Button1</description>
+          <weblocator>.//div[contains(@class, 'switcher')]//li[contains(@class, 'active')]</weblocator>
         </webElement>
       </childs>
     </webElement>
+
     <webElement name="LinksTab">
       <description>Links tab</description>
       <webLocator>(.//a[contains(@class, 'x-tab-right')])[2]</webLocator>
@@ -79,7 +59,7 @@
     <webElement name="ImageTab">
       <description>Image tab</description>
       <webLocator>(.//a[contains(@class, 'x-tab-right')])[3]</webLocator>
-      
+
       <childs>
         <webElement name="AltTextInput">
           <description>Input for Alt Text</description>
@@ -133,5 +113,5 @@
         </webElement>
       </childs>
     </webElement>
-   </childs>
+  </childs>
 </webElement>

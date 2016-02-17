@@ -21,11 +21,23 @@ namespace TConsole
 
         [XmlProperty("Image of Hero Centered", IsRequired = false)]
         [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "Image", "image")]
+        [XmlConstraint("Layout.Style", HeroCenteredLayoutStyle.PromoFullWidth, IsPositive = false)]
         public HeroImage Image { get; set; }
 
         [XmlProperty("Layout of Hero Centered", IsRequired = false)]
         [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "Layout", "layout")]
         public HeroCenteredLayout Layout { get; set; }
+
+
+        [XmlProperty("Video path of Hero Centered", IsRequired = false)]
+        [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "VideoPath", "videoPath")]
+        [XmlConstraint("Layout.Style", HeroCenteredLayoutStyle.PromoFullWidth)]
+        public string VideoPath { get; set; }
+
+        [XmlProperty("Video Poster of Hero Centered", IsRequired = false)]
+        [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "VideoPoster", "videoPoster", "videoposter")]
+        [XmlConstraint("Layout.Style", HeroCenteredLayoutStyle.PromoFullWidth)]
+        public HeroImage VideoPoster { get; set; }
     }
 
     [XmlType("Hero Centered Text")]
@@ -60,7 +72,7 @@ namespace TConsole
     {
         [XmlProperty("Style enum of Hero Centered Layout", IsRequired = false)]
         [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "Style", "style")]
-        public HeroLayoutStyle Style { get; set; } = HeroLayoutStyle.Promo;
+        public HeroCenteredLayoutStyle Style { get; set; } = HeroCenteredLayoutStyle.Promo;
 
         [XmlProperty("Breadcrumbs of Hero Centered Layout", IsRequired = false)]
         [XmlLocation(XmlLocationType.Attribute | XmlLocationType.Element, "Breadcrumbs", "breadcrumbs")]
