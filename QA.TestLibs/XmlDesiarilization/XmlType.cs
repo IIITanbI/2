@@ -9,6 +9,7 @@
     using System.Xml.Linq;
     using Exceptions;
     using CustomParsers;
+
     public class XmlType
     {
         public Type XType { get; private set; }
@@ -50,7 +51,7 @@
 
         public override string ToString()
         {
-            return $"XmlType for type: {XType.Name}";
+            return $"XmlType for type: {XType.Name}\nDescription: {Description}";
         }
     }
 }

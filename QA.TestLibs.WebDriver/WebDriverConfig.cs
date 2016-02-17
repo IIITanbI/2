@@ -3,13 +3,13 @@
     using System;
     using QA.TestLibs.XmlDesiarilization;
     using OpenQA.Selenium;
-    
+
     [XmlType("WebDriver configuration")]
     public abstract class WebDriverConfig : XmlBaseType
     {
         public WebDriverType DriverType { get; set; }
 
-        [XmlProperty("Is JavaScript enabled? Default: false", IsRequired = false)]
+        [XmlProperty("Is JavaScript enabled? Default: true", IsRequired = false)]
         [XmlLocation(XmlLocationType.Element | XmlLocationType.Attribute, "isJavaScriptEnabled", "isJavaScript", "javaScript")]
         public bool IsJavaScriptEnabled { get; set; } = true;
 
@@ -37,7 +37,7 @@
         [XmlProperty("Uri to Grid")]
         [XmlLocation(XmlLocationType.Element | XmlLocationType.Attribute, "gridUri", "uriForGrid")]
         [XmlConstraint("IsGrid", true)]
-        public bool GridUri { get; set; }
+        public string GridUri { get; set; } = null;
 
         [XmlProperty("Is highlightable?")]
         [XmlLocation(XmlLocationType.Element | XmlLocationType.Attribute, "highlightEnabled", "highlight")]

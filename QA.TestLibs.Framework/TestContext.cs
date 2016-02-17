@@ -10,12 +10,14 @@
     using System.Xml.Linq;
     using XmlDesiarilization;
     using Commands;
-
+    using System.Reflection;
 
     [XmlType("TestingContext config")]
     [XmlLocation("context", "testingContext")]
     public class TestContext : XmlBaseType, IContext
     {
+        private static Lazy<MethodInfo> _initMethod = new Lazy<MethodInfo>(() => (typeof(XmlBaseType).GetMethod("Init")));
+
         [XmlProperty("List of TestContextItems", IsAssignableTypesAllowed = true, IsRequired = false)]
         [XmlLocation("contextItems")]
         public List<TestContextItem> TestContextItems { get; set; } = new List<TestContextItem>();
@@ -43,7 +45,7 @@
             TestContextItems = builtContextItems;
         }
 
-        public void Init()
+        public void Initialize()
         {
             if (ParentContext != null)
             {
@@ -69,7 +71,8 @@
 
                 var configXml = XElement.Parse(ResolveBind(contextItem.ItemConfig.ToString()));
 
-                var obj = XmlParser.Parse(type.XType, configXml, true, null, this);
+                var obj = XmlParser.Parse(type.XType, configXml, false, null, this);
+                _initMethod.Value.Invoke(obj, null);
 
                 if (!ContextValues.ContainsKey(typeName))
                     ContextValues.Add(typeName, new Dictionary<string, object>());
@@ -87,10 +90,10 @@
             foreach (var managerItem in CommandManagersItems)
             {
                 var manager = ReflectionManager.GetCommandManagerByTypeName(managerItem.ManagerType);
-                var managerConfig = XmlParser.Parse(manager.ConfigType, managerItem.Config, true, null, this);
+                var managerConfig = XmlParser.Parse(manager.ConfigType, managerItem.Config.Elements().First(), true, null, this);
+                _initMethod.Value.Invoke(managerConfig, null);
 
                 var managerObj = manager.CreateObject(managerConfig);
-
 
                 if (!Managers.ContainsKey(managerItem.ManagerType))
                     Managers.Add(managerItem.ManagerType, new Dictionary<string, object>());
@@ -115,7 +118,11 @@
 
         public bool Contains(Type type, string name)
         {
-            throw new NotImplementedException();
+            if (!ContextValues.ContainsKey(type.Name))
+                return false;
+            if (!ContextValues[type.Name].ContainsKey(name))
+                return false;
+            return true;
         }
 
         public string ResolveBind(string stringWithBind)
@@ -139,7 +146,7 @@
 
         public object ResolveValue(Type type, string name)
         {
-            throw new NotImplementedException();
+            return ContextValues[type.Name][name];
         }
     }
 }
